@@ -1,9 +1,7 @@
 package auth
 
 import (
-	"reflect"
 	"testing"
-	"strings"
 	"net/http"
 )
 
@@ -18,7 +16,7 @@ func TestGetAPIKey (t *testing.T) {
 			name: "Valid API key in header",
 			headers: http.Header{"Authorization": []string{"ApiKey valid-key-123"}},
 			expectedKey: "valid-key-123",
-			expectedError: false,
+			expectError: false,
 		},
 		{
 			name: "Missing Authorization header",
