@@ -31,7 +31,7 @@ func TestGetAPIKey (t *testing.T) {
 			headers: http.Header{"Authorization": []string{"Api Key valid-key-123"}},
                         expectedKey: "",
                         expectError: true,
-		}
+		},
 	}
 		        
 	for _, tc := range tests {
